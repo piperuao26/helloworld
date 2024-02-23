@@ -14,10 +14,10 @@
     font-weight: 500;
   }
   .content {
-        background-image: url('https://www.pinpng.com/pngs/m/368-3682138_huellas-de-gatos-huellas-de-perro-cafe-hd.png'); /* Ruta a la imagen de libro de fondo */
+        background-image: url('https://img.freepik.com/vector-premium/cartel-minimo-ilustracion-vector-arbol-coco_969863-6808.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1708646400&semt=ais'); /* Ruta a la imagen de libro de fondo */
         background-repeat: repeat; /* Repetir la imagen */
         background-size: 3.5cm; /* Tamaño automático */
-        background-color: #360369  !important;
+        background-color: #0e0d0e  !important;
         font-size: 0.4cm;
     
     }
