@@ -6,6 +6,7 @@ from django.urls import reverse
 from django import forms
 from django.core.exceptions import ValidationError
 from .models import Product
+from .interfaces import ImageStorage
 
 def ImageViewFactory(image_storage):
     class ImageView(View):
@@ -165,7 +166,7 @@ class ImageViewNoDI(View):
         return render(request, self.template_name, {'image_url': image_url})
 
     def post(self, request):
-        image_storage = ImageLocalStorage()
+        image_storage = ImageStorage()
         image_url = image_storage.store(request)
         request.session['image_url'] = image_url
 

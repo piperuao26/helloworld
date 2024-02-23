@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import homePageView, AboutPageView, ProductIndexView, ProductShowView, ProductCreateView,CartRemoveAllView,CartView,ImageViewNoDI, ImageViewFactory
-
+from .interfaces import ImageStorage
 urlpatterns = [
     path("", homePageView.as_view(), name='home'),
     path('about/', AboutPageView.as_view(), name='about'),
@@ -12,8 +12,8 @@ urlpatterns = [
     path('cart/removeAll', CartRemoveAllView.as_view(), name='cart_removeAll'),
 
 
-    path('image/', ImageViewFactory(ImageLocalStorage()).as_view(), name='image_index'),
-    path('image/save', ImageViewFactory(ImageLocalStorage()).as_view(), name='image_save'),
+    path('image/', ImageViewFactory(ImageStorage()).as_view(), name='image_index'),
+    path('image/save', ImageViewFactory(ImageStorage()).as_view(), name='image_save'),
     path('imagenotdi/', ImageViewNoDI.as_view(), name='imagenodi_index'),
     path('image/save', ImageViewNoDI.as_view().as_view(), name='imagenodi_save'),
 
